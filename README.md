@@ -1,5 +1,7 @@
  # function-as
 
+[![build status](https://api.travis-ci.org/ecman/function-as.png)](https://travis-ci.org/ecman/function-as) [![codecov](https://codecov.io/gh/ecman/function-as/branch/master/graph/badge.svg)](https://codecov.io/gh/ecman/function-as) [![Code Climate](https://codeclimate.com/github/ecman/function-as/badges/gpa.svg)](https://codeclimate.com/github/ecman/function-as)
+
 Pass functions as if they had, one or more, constant args
 
 # Usage

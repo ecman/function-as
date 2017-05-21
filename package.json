@@ -1,6 +1,6 @@
 {
   "name": "function-as",
-  "version": "1.0.0-2",
+  "version": "1.0.0",
   "description": "Pass functions as if they had, one or more, constant args",
   "main": "index.js",
   "directories": {
