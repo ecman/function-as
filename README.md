@@ -42,3 +42,33 @@ console.log( "Set first params as 'ZERO' and last as 'FIVE'\n" +
              "by chaining calls to asfirst() and aslast()" );
 run_callback(five_strings.asfirst('ZERO').aslast('FIVE'));
 ```
+
+Output:
+
+```text
+A normal call
+result: null one two three four five
+
+Set first params as '0'
+result: 0 one two three four five
+
+Set first params as [caller specified] and '1'
+result: null 1 two three four five
+
+Set last params as '5'
+result: null one two three four 5
+
+Set last params as '4' and [caller specified]
+result: null one two three 4 five
+
+Set first params as '0' and last as '5'
+result: 0 one two three four 5
+
+Set first params as [caller specified],'1', '2'
+and last as '4', '5'
+result: null 1 2 three 4 5
+
+Set first params as 'ZERO' and last as 'FIVE'
+by chaining calls to asfirst() and aslast()
+result: ZERO one two three four FIVE
+```
