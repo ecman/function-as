@@ -83,3 +83,24 @@ assert.deepStrictEqual(
   + " first param to 'ZERO' and the last to 'FIVE'"
 );
 console.log("asfirst('ZERO').asfirst('FIVE') call OK");
+
+assert.deepStrictEqual(
+  [null, '1', '2', '3', '4', '5'],
+  run_callback(five_strings.asfirst(undefined, '1', '2', '3', '4', '5', '6')),
+  "Specifying arguments beyond function signature\n"
+  + "should have no affect"
+); 
+
+assert.deepStrictEqual(
+  ['0', '1', '2', '3', '4', '5'],
+  run_callback(five_strings.aslast('0', '1', '2', '3', '4', '5', undefined)),
+  "Specifying arguments beyond function signature\n"
+  + "should have no affect"
+);
+assert.deepStrictEqual(
+  [null, '1', '2', '3', '4', '5'],
+  run_callback(five_strings.aslast(undefined, '1', '2', '3', '4', '5', undefined)),
+  "Specifying arguments beyond function signature\n"
+  + "should have no affect"
+);
+console.log("Unaffecting arguments OK");
