@@ -11,7 +11,7 @@ Function.prototype.aslast = function (...dargs) {
     fillUndefs(dargs, args, true);
     var dlen = dargs.length;
     return this(...(args.splice(
-      args.length - dlen, dlen) 
+      Math.max(0, args.length - dlen), dlen)
       && args), ...dargs);
   }.bind(this);
 };
@@ -27,7 +27,9 @@ function fillUndefs(dargs, args, last) {
   let aindex;
   while (undef >= 0) {
     if (undef < args.length) {
-      aindex = last ? args.length - undef : undef;
+      aindex = last ?
+        undef + Math.max(args.length - dargs.length, 0) :
+        undef;
       dargs[undef] = args[aindex];
       undef = dargs.indexOf(undefined);
     } else break;
